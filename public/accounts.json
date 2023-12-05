@@ -1,0 +1,15 @@
+[
+    {
+      "id": 1,
+      "name": "Sam",
+      "email": "sam@pitt.edu",
+      "account type": "educator"
+    },
+    {
+      "id": 2,
+      "name": "Jerry",
+      "email": "jerry@pitt.edu",
+      "account type": "student"
+    }
+  ]
+  

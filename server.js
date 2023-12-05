@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const lessons = require('./public/lessons.json');
+const accounts = require('./public/accounts.json');
 const path = require('path');
 const fs = require('fs');
 
@@ -31,7 +32,13 @@ app.post('/lessons', (req, res) => {
     });
   });
 });
+
+app.get('/accounts', (req, res) => {
+  res.json(accounts);
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+

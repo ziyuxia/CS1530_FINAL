@@ -126,3 +126,40 @@ function showCreateLessonForm() {
   document.getElementById('lessons-container').innerHTML = formHtml;
   document.getElementById('create-lesson-form').onsubmit = createNewLesson;
 }
+
+
+function showEducatorAccountInfo() {
+  fetch('http://localhost:3000/accounts')
+    .then(response => response.json())
+    .then(accounts => {
+      const educators = accounts.filter(account => account['account type'] === 'educator');
+      const educatorsHtml = educators.map(educator => `
+        <div>
+          <h3>${educator.name}</h3>
+          <p>Email: ${educator.email}</p>
+          <p>Account Type: ${educator['account type']}</p>
+        </div>
+      `).join('');
+
+      document.getElementById('lessons-container').innerHTML = educatorsHtml;
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+function showStudentAccountInfo() {
+  fetch('http://localhost:3000/accounts')
+    .then(response => response.json())
+    .then(accounts => {
+      const educators = accounts.filter(account => account['account type'] === 'student');
+      const educatorsHtml = educators.map(educator => `
+        <div>
+          <h3>${educator.name}</h3>
+          <p>Email: ${educator.email}</p>
+          <p>Account Type: ${educator['account type']}</p>
+        </div>
+      `).join('');
+
+      document.getElementById('lessons-container').innerHTML = educatorsHtml;
+    })
+    .catch(error => console.error('Error:', error));
+}
