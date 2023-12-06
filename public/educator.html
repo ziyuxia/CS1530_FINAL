@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="main.css" />
-    <script type="text/javascript" src="http://localhost:3000/main.js"></script>
-    <title>Title</title>
-  </head>
 
-  <body onload="showLessons()">
-    <nav>
-      <ul id="nav-list">
-        <li><a href="/educator.html">Home</a></li>
-        <li><a href="/educator.html">Explore</a></li>
-        <li><a href="javascript:void(0);" onclick="showCreateLessonForm()">Create Lesson</a></li>
-        <li><a href="/educator.html" >Assign Lesson++</a></li>
-        <li><a href="javascript:void(0);" onclick="showStudentAccountInfo()">View Students</a></li>
-        <li><a href="javascript:void(0);" onclick="showEducatorAccountInfo()">Account</a></li>
-        <li style="float: right">
-          <a class="active" href="./educator.html">Educator</a>
-        </li>
-        <li style="float: right"><a class="" href="/">Student</a></li>
-      </ul>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="main.css" />
+  <script type="text/javascript" src="http://localhost:3000/main.js"></script>
+  <title>CS1530</title>
+</head>
 
-    <!-- lessons added in javascript -->
-    <div id="lessons-container"></div>
-  </body>
+<body onload="showLessons()">
+  <nav>
+    <ul id="nav-list">
+      <li><a href="/educator.html">Home</a></li>
+      <li><a href="/educator.html">Explore</a></li>
+      <li><a href="javascript:void(0);" onclick="showCreateLessonForm()">Create Lesson</a></li>
+      <li><a href="/educator.html">Assign Lesson++</a></li>
+      <li><a href="javascript:void(0);" onclick="showStudentAccountInfo()">View Students</a></li>
+      <li><a href="javascript:void(0);" onclick="showEducatorAccountInfo()">Account</a></li>
+      <li style="float: right">
+        <a class="active" href="./educator.html">Educator</a>
+      </li>
+      <li style="float: right"><a class="" href="/">Student</a></li>
+    </ul>
+  </nav>
+
+  <!-- lessons added in javascript -->
+  <div id="lessons-container"></div>
+</body>
 
 
-  
+
 
 </html>
